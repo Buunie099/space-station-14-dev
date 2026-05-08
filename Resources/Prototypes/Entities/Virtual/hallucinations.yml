@@ -4,6 +4,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: Hallucination
+      minTimeLeft: 1.0
 
 - type: entity
   id: HallucinationBloodred
@@ -11,5 +12,4 @@
   parent: HallucinationBase
   components:
     - type: Sprite
-      sprite: Textures/Objects/Tools/Decoys/operative_decoy.rsi
-      state: oballoon
+      sprite: Objects/Tools/Decoys/operative_decoy.rsi

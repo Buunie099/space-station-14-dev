@@ -14,6 +14,7 @@ public sealed class SchizophreniaSystem : SharedSchizophreniaSystem
     [Dependency] private readonly IRobustRandom _random = default!;
     public override void Initialize()
     {
+        Log.Debug("1");
         base.Initialize();
         SubscribeLocalEvent<SchizophreniaComponent, ComponentStartup>(OnComponentStartup);
         SubscribeLocalEvent<SchizophreniaComponent, LocalPlayerDetachedEvent>(OnComponentDetached);
@@ -21,15 +22,16 @@ public sealed class SchizophreniaSystem : SharedSchizophreniaSystem
 
     public override void Update(float frameTime)
     {
+        Log.Debug("2");
         base.Update(frameTime);
 
         if (!_timing.IsFirstTimePredicted)
             return;
 
-        if (_player.LocalEntity is not EntityUid localPlayer)
-            return;
+        var localPlayer = _player.LocalEntity.GetValueOrDefault(EntityUid.Invalid);
 
-        ShowHallucination(localPlayer);
+        if (localPlayer != EntityUid.Invalid)
+            ShowHallucination(localPlayer);
     }
 
     private void OnComponentStartup(EntityUid uid, SchizophreniaComponent component, ComponentStartup args)
