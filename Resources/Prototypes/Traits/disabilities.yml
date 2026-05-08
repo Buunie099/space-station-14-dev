@@ -79,6 +79,19 @@
         collection: Paracusia
 
 - type: trait
+  id: Schizophrenia
+  name: trait-schizophrenia-name
+  description: trait-schizophrenia-name
+  category: Disabilities
+  components:
+    - type: Schizophrenia
+      minTimeBetweenIncidents: 0.1
+      maxTimeBetweenIncidents: 300
+      maxHallucinationDistance: 7
+      hallucinations:
+        - HallucinationBloodred
+
+- type: trait
   id: PainNumbness
   name: trait-painnumbness-name
   description: trait-painnumbness-desc

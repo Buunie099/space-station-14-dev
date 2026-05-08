@@ -24,6 +24,9 @@ trait-muted-desc = You can't speak.
 trait-paracusia-name = Paracusia
 trait-paracusia-desc = You hear sounds that aren't really there.
 
+trait-schizophrenia-name = Schizophrenia
+trait-schizophrenia-desc = You see things that aren't really there.
+
 trait-unrevivable-name = Unrevivable
 trait-unrevivable-desc = You are unable to be revived by defibrillators.
 

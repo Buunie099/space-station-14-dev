@@ -1,0 +1,15 @@
+- type: entity
+  id: HallucinationBase
+  name: hallucination
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Hallucination
+
+- type: entity
+  id: HallucinationBloodred
+  name: hallucinationBloodred
+  parent: HallucinationBase
+  components:
+    - type: Sprite
+      sprite: Textures/Objects/Tools/Decoys/operative_decoy.rsi
+      state: oballoon
